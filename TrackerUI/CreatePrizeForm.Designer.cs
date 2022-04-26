@@ -160,7 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(462, 513);
+            this.ClientSize = new System.Drawing.Size(430, 454);
             this.Controls.Add(this.createPrizeBtn);
             this.Controls.Add(this.orLabel);
             this.Controls.Add(this.prizePercentageValue);
