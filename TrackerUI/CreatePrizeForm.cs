@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrackerLibrary;
+using TrackerLibrary.DataAccess;
+using TrackerLibrary.Models;
 
 namespace TrackerUI
 {
@@ -44,8 +46,7 @@ namespace TrackerUI
         private bool ValidateForm()
         {
             bool output = true;
-            int placeNumber;
-            bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out placeNumber);
+            bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out int placeNumber);
 
             if (!placeNumberValidNumber)
             {
@@ -57,10 +58,8 @@ namespace TrackerUI
                 output = false;
             }
 
-            decimal prizeAmount;
-            double prizePercentage;
-            bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out prizeAmount);
-            bool prizePercentageValid = double.TryParse(prizePercentageValue.Text, out prizePercentage);
+            bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out decimal prizeAmount);
+            bool prizePercentageValid = double.TryParse(prizePercentageValue.Text, out double prizePercentage);
 
             if (prizeAmountValid == false || prizePercentageValid == false)
             {
